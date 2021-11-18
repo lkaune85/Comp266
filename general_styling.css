@@ -17,8 +17,10 @@ h1 {
   color: hsl(0, 0%, 100%);
   text-align: center;
   font-family: Garamond, Times, serif;
+  font-size: 3.1em;
 }
   
 body {
   background-color: hsl(204, 35%, 38%);
+  font-size: 100%;
 }
