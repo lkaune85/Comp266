@@ -19,8 +19,7 @@
   font-size: 2.5em;
 
   /*Position*/
-  position:-webkit-sticky;
-  position: sticky;
+  position: relative;
   top: 0;
 }
 
@@ -60,9 +59,40 @@
   float: left;
 }
 
-/*used to separate inline elements*/
-.separate {
-  display: inline-block;
+/*used to avoid overlapping for floated elements*/
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*navigation bar style*/
+.navigation {
+  overflow: hidden;
+  background-color: rgb(58, 58, 58);
+  position: relative;
+  top: 3px;
+}
+
+/*navigation links*/
+.navigation a {
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding: 10px 12px;
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+.navigation a:hover{
+  background-color: whitesmoke;
+  color: black;
+}
+
+/*padding and other box elements will be contained within the height specified*/
+* {
+  box-sizing: border-box;
 }
 
 /*general body styles*/
