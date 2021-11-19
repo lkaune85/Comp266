@@ -1,7 +1,7 @@
 /*style for the title bar */
 .titlebar {
   /*Background*/
-  background-color: hsl(39, 100%, 50%);
+  background-color: hsl(39, 76%, 45%);
   outline-color: hsl(17, 64%, 50%);
   outline-width: 3px;
   outline-style: solid;
@@ -9,7 +9,6 @@
   border-width: 1px;
   border-radius: 5px;
   border-color: hsl(0, 0%, 0%);
-  opacity: 0.9;
   margin: 0px 0px 0px 0px;
   padding: 7px 0px 7px 0px;
 
@@ -18,6 +17,52 @@
   text-align: center;
   font-family: Garamond, Times, serif;
   font-size: 2.5em;
+
+  /*Position*/
+  position:-webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+/*general note styles*/
+.note {
+  background-color: hsla(39, 76%, 45%, 0.637);
+  padding: 5px 5px 5px 5px;
+  width: 100%;
+  display: block;
+}
+
+/*chatbox styles*/
+.chatbox {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 3em;
+}
+.chatbox:hover{
+  cursor: pointer;
+}
+
+/*home return styles*/
+.home {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+}
+.home:hover{
+  cursor: pointer;
+}
+
+/*card image styles*/
+.cardimg{
+  width:360px;
+  height:512px;
+  float: left;
+}
+
+/*used to separate inline elements*/
+.separate {
+  display: inline-block;
 }
 
 /*general body styles*/
@@ -30,13 +75,13 @@ body {
 
 /*general link styles*/
 a {
-  text-decoration: none;
-  color: coral;
+  color: rgb(102, 0, 97);
 }
 
 /*general table styles*/
 table {
-  width: 100%;
+  max-width: 100%;
+  width:100%;
   border: 1px solid black;
   border-collapse: collapse;
 }
