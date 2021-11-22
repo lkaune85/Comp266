@@ -12,9 +12,15 @@
         <strong>Beginning The Gathering</strong>
         <span class="home" title="Return to Home"><a href="homepage.html"><i class="fas fa-house-user"></i></a></span>
     </div>
-    <span class="chatbox"><i class="far fa-comments"></i></span>
 
-    <h2>FAQ</h2>
+    <div class="clearfix">
+        <form>
+            <input class="search" type="text" name="search" placeholder="Search...">
+        </form>
+        <h2>FAQ</h2>
+    </div>
+    
+    <span class="chatbox"><i class="far fa-comments"></i></span>
 
     <p><b>Q:</b></p>
     <p>
@@ -25,13 +31,25 @@
         Have a question you don't see answered here? Send it below and we'll get back to you ASAP!
     </p>
     <form action="mailto:lkaune1@athabasca.edu" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br>
-        <label for="question">Question:</label>
-        <input type="text" id="question" name="question"><br>
-        <label for="email">Your Email:</label>
-        <input type="text" id="email" name="email"><br>
-        <input type="submit" value="submit">
+        <div class="float25">
+            <label for="name">Name:</label>
+        </div>
+        <div class="float75">
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="float25">
+            <label for="question">Question:</label>
+        </div>
+        <div class="float75">
+            <input type="text" id="question" name="question">
+        </div>
+        <div class="float25">
+            <label for="email">Your Email:</label>
+        </div>
+        <div class="float75">
+            <input type="text" id="email" name="email">
+        </div>
+        <input type="submit" value="Submit">
     </form>
 
     <p><i>By: Lukas Kaune, Nov 12, 2021</i></p>

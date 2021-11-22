@@ -1,3 +1,8 @@
+/*padding and other box elements will be contained within the height specified*/
+* {
+  box-sizing: border-box;
+}
+
 /*style for the title bar */
 .titlebar {
   /*Background*/
@@ -37,6 +42,7 @@
   bottom: 10px;
   right: 10px;
   font-size: 3em;
+  color: black;
 }
 .chatbox:hover{
   cursor: pointer;
@@ -50,6 +56,16 @@
 }
 .home:hover{
   cursor: pointer;
+}
+
+/*search field styles*/
+.search {
+  background-color: white;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  border: 2px solid rgb(184, 184, 184);
+  float: right;
+  width: 25%;
 }
 
 /*card image styles*/
@@ -90,9 +106,9 @@
   color: black;
 }
 
-/*padding and other box elements will be contained within the height specified*/
-* {
-  box-sizing: border-box;
+/*styling for home icon*/
+i[class="fas fa-house-user"]:hover{
+  color: hsl(204, 35%, 38%);
 }
 
 /*general body styles*/
@@ -125,4 +141,46 @@ td {
 }
 tr:hover {
   background-color: green;
+}
+
+/*form stylings*/
+input[name="name"], input[name="question"], input[name="email"] {
+  padding: 10px 16px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+input[name="search"] {
+  padding: 10px 16px;
+  border-radius: 4px;
+  width: 25%;
+}
+
+input[type="text"]:focus {
+  border: 1px solid rgb(61, 61, 61);
+}
+
+input[type="button"] {
+  cursor: pointer;
+}
+
+/*generic float with percentage widnow allocation*/
+.float25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.float75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/*resive float windows amnd buttons when screen is less than 660px*/
+@media screen and (max-width: 600px) {
+  .float25, .float75, input[type="submit"] {
+    width: 100%;
+    margin-top: 0.5px;
+  }
 }
