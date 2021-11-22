@@ -66,6 +66,7 @@
   border: 2px solid rgb(184, 184, 184);
   float: right;
   width: 25%;
+  margin-top: 5px;
 }
 
 /*card image styles*/
@@ -182,5 +183,13 @@ input[type="button"] {
   .float25, .float75, input[type="submit"] {
     width: 100%;
     margin-top: 0.5px;
+  }
+  .search {
+    width: 100%;
+  }
+  .titlebar{
+    text-align: right;
+    font-size: 2em;
+    padding-right: 10px;
   }
 }
