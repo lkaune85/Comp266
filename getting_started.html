@@ -11,53 +11,63 @@
         <strong>Beginning The Gathering</strong>
         <span class="home" title="Return to Home"><a href="homepage.html"><i class="fas fa-house-user"></i></a></span>
     </div>
+    
+    <div class="search">
+        <form>
+            <input type="text" name="search" placeholder="Search...">
+        </form>
+    </div>
     <span class="chatbox"><i class="far fa-comments"></i></span>
 
-    <form>
-        <input class="search" type="text" name="search" placeholder="Search...">
-    </form>
     <h2>The Basics</h2>
-    
-    <p>
-        Lets start some basics knowledge about the cards in Magic: The Gathering. Firstly magic cards are represented by 5 colours:
-        White, Blue, Black, Red, and Green. Each of these colours
-        tend to follow a theme or style of gameplay.
-    </p>
+    <div class="row">
+        <div class="column">
+            Lets start some basics knowledge about the cards in Magic: The Gathering. Firstly magic cards are represented by 5 colours:
+            White, Blue, Black, Red, and Green. Each of these colours
+            tend to follow a theme or style of gameplay.
+            The colours of your cards will also indicate the <em>conditions</em> needed to cast them.<br/>
+            Let's breakdown the parts of the card below: <br/>
+            <img class="cardimg" src="./images/card_layout.svg.png" alt="The layout of a sample Magic: The Gathering card" />
+        </div>
+        <div class="column">
+            [This is the text used to describe the image]. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, 
+            nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. 
+            Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. 
+            Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. 
+            Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...
 
-    <img src="./images/mtg_colour_circles.png" alt="White, Blue, Black, Red, and Green circles in a circle" style="width:128px;height:128px;"/>
-    
-    <p>
-        The colours of your cards will also indicate the <i>conditions</i> needed to cast them.<br/>
-        Let's breakdown the parts of the card below:
-    </p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, 
+            nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. 
+            Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. 
+            Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. 
+            Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...
+        </div>
+    </div>
 
-    <div class="clearfix">
-        <img src="./images/card_layout.svg.png" alt="The layout of a sample Magic: The Gathering card" class="cardimg"/>
-        [This is the text used to describe the image]. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, 
-        nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. 
-        Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. 
-        Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. 
-        Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...
+    <div class="row">
+        <div class="column">
+            <h3>What are the phases of a turn?</h3>
+            <ol>
+                <li>Untap</li>
+                <li>Upkeep</li>
+                <li>Draw</li>
+                <li>Main Phase 1</li>
+                <li>Combat Phase</li>
+                <li>Main Phase 2</li>
+                <li>End Step</li>
+            </ol>
+        </div>
+        <div class="column">
+            <h3>What happens during each phase?</h3>
+            At the beginning of the turn there are three phases before you start playing most lands and spells.<br/>
+            The Untap phase where you untap all the cards you control in play (A.K.A permanents).<br/>
+            The Upkeep phase where things will sometimes happen.<br/>
+            The Draw phase where you will take the top card of you deck and put it into your hand (this is called drawing a card).<br/>
+
+        </div>
+
     </div>
     
-    <h3>What are the phases of a turn?</h3>
-    <ol>
-        <li>Untap</li>
-        <li>Upkeep</li>
-        <li>Draw</li>
-        <li>Main Phase 1</li>
-        <li>Combat Phase</li>
-        <li>Main Phase 2</li>
-        <li>End Step</li>
-    </ol>
-    
-    <h3>What happens during each phase?</h3>
-    <p>
-        At the beginning of the turn there are three phases before you start playing most lands and spells.<br/>
-        The Untap phase where you untap all the cards you control in play (A.K.A permanents).<br/>
-        The Upkeep phase where things will sometimes happen.<br/>
-        The Draw phase where you will take the top card of you deck and put it into your hand (this is called drawing a card).<br/>
-    </p>
     <p>
         Here they are summarized in the table below:
     </p>
@@ -91,7 +101,8 @@
     <div class="note">
         <strong>Note:</strong> Don't worry about the Upkeep for now, we'll get to that later.
     </div>
+    
     <br/>
-    <p><i>By: Lukas Kaune, Nov 12, 2021</i></p>
+    <em>By: Lukas Kaune, Nov 12, 2021</em>
 </body>
 </html> 

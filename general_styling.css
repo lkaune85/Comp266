@@ -59,28 +59,36 @@
 }
 
 /*search field styles*/
-.search {
+.search input{
   background-color: white;
   background-repeat: no-repeat;
   font-size: 14px;
   border: 2px solid rgb(184, 184, 184);
-  float: right;
-  width: 25%;
   margin-top: 5px;
+  width: 50%;
+  float: right;
 }
 
 /*card image styles*/
 .cardimg{
-  width:360px;
-  height:512px;
-  float: left;
+  width:50%;
+  height:71%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/*used to avoid overlapping for floated elements*/
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+/*logo styling*/
+.logo {
+  width: 50vw;
+  height: 15.5vw;
+}
+
+/*small square img style*/
+.smsquareimg{
+  width: 50%;
+  height: 50%;
+  display: block;
 }
 
 /*navigation bar style*/
@@ -108,6 +116,9 @@
 }
 
 /*styling for home icon*/
+i[class="fas fa-house-user"] {
+  color: white;
+}
 i[class="fas fa-house-user"]:hover{
   color: hsl(204, 35%, 38%);
 }
@@ -120,10 +131,6 @@ body {
   color: hsl(0, 0%, 100%);
 }
 
-/*general link styles*/
-a {
-  color: white;
-}
 
 /*general table styles*/
 table {
@@ -154,15 +161,15 @@ input[name="name"], input[name="question"], input[name="email"] {
 input[name="search"] {
   padding: 10px 16px;
   border-radius: 4px;
-  width: 25%;
 }
 
 input[type="text"]:focus {
   border: 1px solid rgb(61, 61, 61);
 }
 
-input[type="button"] {
+input[type="submit"] {
   cursor: pointer;
+  float: right;
 }
 
 /*generic float with percentage widnow allocation*/
@@ -178,13 +185,30 @@ input[type="button"] {
   margin-top: 6px;
 }
 
+/*Create two page columns for content*/
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/*Clear floats after column*/
+.row::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /*resive float windows amnd buttons when screen is less than 660px*/
 @media screen and (max-width: 600px) {
   .float25, .float75, input[type="submit"] {
     width: 100%;
     margin-top: 0.5px;
   }
-  .search {
+  .column {
+    width: 100%;
+  }
+  .search input{
     width: 100%;
   }
   .titlebar{
@@ -192,4 +216,5 @@ input[type="button"] {
     font-size: 2em;
     padding-right: 10px;
   }
+  
 }
