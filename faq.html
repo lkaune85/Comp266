@@ -2,32 +2,61 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Frequently Asked Questions</title>
+    <link rel="stylesheet" type="text/css" href="./styles/general_styling.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://kit.fontawesome.com/4c54e0ffa5.js" crossorigin="anonymous"></script>
+    <title>Frequently Asked Questions</title>
 </head>
 
 <body>
-    <h1>FAQ</h1>
+    <div class="titlebar">
+        <strong>Beginning The Gathering</strong>
+        <span class="home" title="Return to Home"><a href="homepage.html"><i class="fas fa-house-user"></i></a></span>
+    </div>
+  
+    <div class="search">
+        <form>
+            <input type="text" name="search" placeholder="Search...">
+        </form>
+    </div>
+    <span class="chatbox"><i class="far fa-comments"></i></span>
 
-    <h4>Q:</h4>
-    <p>
-        A:
-    </p>
-
-    <p>
-        Have a question you don't see answered here? Send it below and we'll get back to you ASAP!
-    </p>
-    <form action="mailto:lkaune1@athabasca.edu" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br>
-        <label for="question">Question:</label>
-        <input type="text" id="question" name="question"><br>
-        <label for="email">Your Email:</label>
-        <input type="text" id="email" name="email"><br>
-        <input type="submit" value="submit">
-    </form>
-
-    <a href="homepage.html">Back to Home</a>
-    <p><em>By: Lukas Kaune, Nov 12, 2021</em></p>
+    <h2>FAQ</h2>
+    <div class="row">
+        <strong>
+            Q:
+        </strong>
+        <p>
+            A:
+        </p>
+    
+        <p>
+            Have a question you don't see answered here? Send it below and we'll get back to you ASAP!
+        </p>
+        <form action="mailto:lkaune1@athabasca.edu" method="post">
+            <div class="float25">
+                <label for="name">Name:</label>
+            </div>
+            <div class="float75">
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="float25">
+                <label for="question">Question:</label>
+            </div>
+            <div class="float75">
+                <input type="text" id="question" name="question">
+            </div>
+            <div class="float25">
+                <label for="email">Your Email:</label>
+            </div>
+            <div class="float75">
+                <input type="text" id="email" name="email">
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+    <br/>
+    <em>By: Lukas Kaune, Nov 12, 2021</em>
 </body>
 </html>

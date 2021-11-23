@@ -1,0 +1,220 @@
+/*padding and other box elements will be contained within the height specified*/
+* {
+  box-sizing: border-box;
+}
+
+/*style for the title bar */
+.titlebar {
+  /*Background*/
+  background-color: hsl(39, 76%, 45%);
+  outline-color: hsl(17, 64%, 50%);
+  outline-width: 3px;
+  outline-style: solid;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: hsl(0, 0%, 0%);
+  margin: 0px 0px 0px 0px;
+  padding: 7px 0px 7px 0px;
+
+  /*Text*/
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  font-family: Garamond, Times, serif;
+  font-size: 2.5em;
+
+  /*Position*/
+  position: relative;
+  top: 0;
+}
+
+/*general note styles*/
+.note {
+  background-color: hsla(39, 76%, 45%, 0.637);
+  padding: 5px 5px 5px 5px;
+  width: 100%;
+  display: block;
+}
+
+/*chatbox styles*/
+.chatbox {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 3em;
+  color: black;
+}
+.chatbox:hover{
+  cursor: pointer;
+}
+
+/*home return styles*/
+.home {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+}
+.home:hover{
+  cursor: pointer;
+}
+
+/*search field styles*/
+.search input{
+  background-color: white;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  border: 2px solid rgb(184, 184, 184);
+  margin-top: 5px;
+  width: 50%;
+  float: right;
+}
+
+/*card image styles*/
+.cardimg{
+  width:50%;
+  height:71%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*logo styling*/
+.logo {
+  width: 50vw;
+  height: 15.5vw;
+}
+
+/*small square img style*/
+.smsquareimg{
+  width: 50%;
+  height: 50%;
+  display: block;
+}
+
+/*navigation bar style*/
+.navigation {
+  overflow: hidden;
+  background-color: rgb(58, 58, 58);
+  position: relative;
+  top: 3px;
+}
+
+/*navigation links*/
+.navigation a {
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding: 10px 12px;
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+.navigation a:hover{
+  background-color: whitesmoke;
+  color: black;
+}
+
+/*styling for home icon*/
+i[class="fas fa-house-user"] {
+  color: white;
+}
+i[class="fas fa-house-user"]:hover{
+  color: hsl(204, 35%, 38%);
+}
+
+/*general body styles*/
+body {
+  background-color: hsl(204, 35%, 38%);
+  font-family: Garamond, Times, serif;
+  font-size: 100%;
+  color: hsl(0, 0%, 100%);
+}
+
+
+/*general table styles*/
+table {
+  max-width: 100%;
+  width:100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+tr:hover {
+  background-color: green;
+}
+
+/*form stylings*/
+input[name="name"], input[name="question"], input[name="email"] {
+  padding: 10px 16px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+input[name="search"] {
+  padding: 10px 16px;
+  border-radius: 4px;
+}
+
+input[type="text"]:focus {
+  border: 1px solid rgb(61, 61, 61);
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  float: right;
+}
+
+/*generic float with percentage widnow allocation*/
+.float25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.float75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/*Create two page columns for content*/
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/*Clear floats after column*/
+.row::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*resive float windows amnd buttons when screen is less than 640px*/
+@media screen and (max-width: 640px) {
+  .float25, .float75, input[type="submit"] {
+    width: 100%;
+    margin-top: 0.5px;
+  }
+  .column {
+    width: 100%;
+  }
+  .search input{
+    width: 100%;
+  }
+  .titlebar{
+    text-align: right;
+    font-size: 2em;
+    padding-right: 10px;
+  }
+  
+}

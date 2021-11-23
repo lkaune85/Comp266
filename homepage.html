@@ -2,19 +2,41 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="stylesheet" type="text/css" href="./styles/general_styling.css"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://kit.fontawesome.com/4c54e0ffa5.js" crossorigin="anonymous"></script>
     <title>Home Page</title>
 </head>
 
 <body>
-    <h1>Beginning The Gathering</h1>
-    <p>Your one stop shop for getting started with</p>
-    <img src="./images/mtg_logo.png" alt="Magic: The Gathering Logo">
+    <div class="titlebar">
+        <strong>Beginning The Gathering</strong>
+        <span class="home" title="Return to Home"><a href="homepage.html"><i class="fas fa-house-user"></i></a></span>
+    </div>
 
-    <h3>Learning Magic: The Gathering</h3>
-    <a href=faq.html>Have some Questions? Click Here!</a><br>
+    <div class="navigation">
+        <a href="getting_started.html" title="Learn the basics of the game">Getting Started</a>
+        <a href=faq.html title="Have some questions? Click Here!">FAQ</a><br>
+    </div>
+    
+    <div class="search">
+        <form>
+            <input type="text" name="search" placeholder="Search...">
+        </form>
+    </div>
 
-    <a href="getting_started.html">Getting Started: The Basics</a>
-    <p><em>By: Lukas Kaune, Nov 12, 2021</em></p>
+    <div class="row">
+        <div class="column">
+            <p>Your one stop shop for getting started with</p>
+            <img class="logo" src="./images/mtg_logo.png" alt="Magic: The Gathering Logo">
+            <span class="chatbox"><i class="far fa-comments"></i></span>
+        </div>
+        <div class="column">
+            
+        </div>
+    </div>
+    
+    <br/>
+    <em>By: Lukas Kaune, Nov 12, 2021</em>
 </body>
 </html>
