@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="./styles/general_styling.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://kit.fontawesome.com/4c54e0ffa5.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./scripts/table_search.js"></script>
+    <title>Frequently Asked Questions</title>
+</head>
+
+<body>
+    <div class="titlebar">
+        <strong>Beginning The Gathering</strong>
+        <span class="home" title="Return to Home"><a href="homepage.html"><i class="fas fa-house-user"></i></a></span>
+    </div>
+    
+    <span class="chatbox"><i class="far fa-comments"></i></span>
+    
+    <input type="text" id="keySearch" onkeyup="searchTable()" placeholder="Search for keywords..."/>
+    
+    <!--
+        *Code adapted from w3schools filter/search table example
+        *https://www.w3schools.com/howto/howto_js_filter_table.asp
+    -->
+    <table id="keywords">
+        <tr class="tbhead">
+            <th>
+                Keyword
+            </th>
+            <th>
+                Descirption
+            </th>
+        </tr>
+        <tr>
+            <td>
+                First Strike
+            </td>
+            <td>
+                This creature deals combat damage before creatures without First Strike or Double Strike
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Lifelink
+            </td>
+            <td>
+                Whenever this creature deals damage you gain that much life
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Trample
+            </td>
+            <td>
+                Any excess comabt damage this creature deals to another creature(s) can be dealt to the defeneding player or a planeswalker they control
+            </td>
+        </tr>
+    </table>
+
+    <br/>
+    <em>By: Lukas Kaune, Nov 12, 2021</em>
+</body>
+</html>
