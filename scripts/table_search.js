@@ -5,11 +5,11 @@
 */
 function searchTable() {
     // Declare variables
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("keySearch"); //get search input
-    filter = input.value.toUpperCase(); //convert input to uppercase for non-case-sensitive filter
-    table = document.getElementById("keywords"); //get table
-    tr = table.getElementsByTagName("tr"); //get table data
+    var filter, tr, td, i, txtValue;
+    //get search input and convert input to uppercase for non-case-sensitive filter
+    filter = document.getElementById("keySearch").value.toUpperCase();
+    //get table and then get the table rows and in array form
+    tr = document.getElementById("keywords").getElementsByTagName("tr");
 
     // Loop through all table rows, and hide those who don't match the search query
     for (i = 0; i < tr.length; i++) {
