@@ -3,6 +3,51 @@
   box-sizing: border-box;
 }
 
+/*general body styles*/
+body {
+  background-color: hsl(204, 33%, 31%);
+  font-family: Garamond, Times, serif;
+  font-size: 100%;
+  color: hsl(0, 0%, 100%);
+}
+
+/*general table styles*/
+table {
+  max-width: 100%;
+  width:100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: left;
+}
+tr:hover {
+  background-color: rgb(80, 80, 80);
+}
+
+/*form stylings*/
+input[type="text"]{
+  background-color: white;
+  font-size: 14px;
+  border: 2px solid rgb(184, 184, 184);
+  padding: 10px 16px;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+input[type="submit"] {
+  cursor: pointer;
+  float: right;
+}
+input[type=text]:focus {
+  border: 2px solid rgb(54, 54, 54);
+  outline: none;
+}
+
 /*style for the title bar */
 .titlebar {
   /*Background*/
@@ -60,10 +105,6 @@
 
 /*search field styles*/
 .search input{
-  background-color: white;
-  background-repeat: no-repeat;
-  font-size: 14px;
-  border: 2px solid rgb(184, 184, 184);
   margin-top: 5px;
   width: 50%;
   float: right;
@@ -84,36 +125,61 @@
   height: 15.5vw;
 }
 
-/*small square img style*/
-.smsquareimg{
-  width: 50%;
-  height: 50%;
-  display: block;
-}
-
-/*navigation bar style*/
+/*navigation bar styles*/
 .navigation {
   overflow: hidden;
-  background-color: rgb(58, 58, 58);
-  position: relative;
-  top: 3px;
+  margin-top: 4px;
+  background-color: rgb(63, 63, 63);
 }
-
-/*navigation links*/
 .navigation a {
   float: left;
-  display: block;
-  text-align: center;
   text-decoration: none;
   color: white;
-  padding: 10px 12px;
-  border-right-style: solid;
-  border-right-width: 1px;
+  text-align: center;
+  padding: 14px 16px;
+  background-color: rgb(63, 63, 63);
 }
-.navigation a:hover{
-  background-color: whitesmoke;
+.navdropdown {
+  float: left;
+  overflow: hidden;
+}
+.navdropdown .dropbutton{
+  border: none;
+  outline: none;
+  background-color: rgb(63, 63, 63);
+  color: white;
+  border: none;
+  padding: 14px 16px;
+  margin: 0;
+  font-family: inherit;
+  font-size: 16px;
+  
+}
+.navigation a:hover, .navdropdown:hover .dropbutton{
+  background-color: hsl(39, 76%, 45%);
+}
+.dropdown-info{
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+}
+.dropdown-info a {
+  float: none;
+  text-decoration: none;
   color: black;
+  padding: 12px 16px;
+  display: block;
+  text-align: center;
+  background-color: whitesmoke;
 }
+.dropdown-info a:hover{
+  background-color: rgb(136, 136, 136);
+}
+.navdropdown:hover .dropdown-info{
+  display: block;
+}
+
 
 /*styling for home icon*/
 i[class="fas fa-house-user"] {
@@ -123,77 +189,29 @@ i[class="fas fa-house-user"]:hover{
   color: hsl(204, 35%, 38%);
 }
 
-/*general body styles*/
-body {
-  background-color: hsl(204, 35%, 38%);
-  font-family: Garamond, Times, serif;
-  font-size: 100%;
-  color: hsl(0, 0%, 100%);
-}
-
-
-/*general table styles*/
-table {
-  max-width: 100%;
-  width:100%;
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-th {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-tr:hover {
-  background-color: green;
-}
-
-/*form stylings*/
-input[name="name"], input[name="question"], input[name="email"] {
-  padding: 10px 16px;
-  border-radius: 4px;
-  width: 100%;
-}
-
-input[name="search"] {
-  padding: 10px 16px;
-  border-radius: 4px;
-}
-
-input[type="text"]:focus {
-  border: 1px solid rgb(61, 61, 61);
-}
-
-input[type="submit"] {
-  cursor: pointer;
-  float: right;
-}
-
 /*generic float with percentage widnow allocation*/
 .float25 {
   float: left;
   width: 25%;
   margin-top: 6px;
 }
-
 .float75 {
   float: left;
   width: 75%;
   margin-top: 6px;
 }
 
-/*Create two page columns for content*/
-.column {
+/*
+*Code adapted from w3schools 2-column example
+*https://www.w3schools.com/css/css_website_layout.asp
+*Cited November 20, 2021
+*/
+.column { /*Create two page columns for content*/
   float: left;
   width: 50%;
   padding: 10px;
 }
-
-/*Clear floats after column*/
-.row::after{
+.row::after{ /*Clear floats after column*/
   content: "";
   display: table;
   clear: both;
