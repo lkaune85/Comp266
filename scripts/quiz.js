@@ -39,28 +39,53 @@ class quiz{
     //function to randomly select questions from qArray of specified difficulty
     randomizeQuestions(qDifficulty){
         var quizQuestions = [];
+        var chooser = [0,1,2,3,4,5,6,7,8,9];
+        var index;
         //for quiz length (5)
+        for(var i=0;i<5;i++){
             //randomly choose an unchosen question
+            index = Math.floor(Math.random()*chooser.length);
             //add it to quizQuestions array
+            quizQuestions[i] = this.questionEasy[index];
+            //remove index for no repeats
+            if(index==chooser.length-1){//end of array
+                chooser = chooser.slice(0,index);
+            }else{//middle/beginning of array
+                //console.log(chooser.slice(0,index).concat(chooser.slice(index+1,chooser.length)));
+                chooser = chooser.slice(0,index).concat(chooser.slice(index+1,chooser.length));
+            }
+        }
         return quizQuestions
     }
 
     userScore(userAnswers){
         var score = [];
-        //for each question in qQuestions
-            //check user answer with questionTrueAnswer
-            //if same set score at current index to 1
-            //otherwise set score at current index to 0;
+        //for each question in quizQuestions
+        for(var i=0;i<this.quizQuestions.length;i++){
+            //check user answer with trueAnswer of quizQuestions
+            if(userAnswers[i]=this.quizQuestions.trueAnswer){
+                score[i] = 1;
+            }else{
+                score[i] = 0;
+            }
+        }
         return score;
     }
 
     calculateScore(userScore){
         var totalScore = 0;
         //for each element in userScore
+        for(var i = 0; i<userScore.length; i++){
             //add userScore at current element to totalScore
+            totalScore+=userScore[i];
+        }
         return totalScore;
     }
 }
 
 const myQuiz = new quiz("easy");
-console.log(myQuiz.questionEasy[0].answers);
+console.log(myQuiz.quizQuestions[0].text);
+console.log(myQuiz.quizQuestions[1].text);
+console.log(myQuiz.quizQuestions[2].text);
+console.log(myQuiz.quizQuestions[3].text);
+console.log(myQuiz.quizQuestions[4].text);
