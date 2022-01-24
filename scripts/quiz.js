@@ -31,7 +31,7 @@ class quiz{
         //for each question
             //add text to htmlDisplay
             //randomize question order and add to htmlDisplay
-            //add radio button for each question
+            //add radio button for each question answer
         //add quiz submit button
         return htmlDisplay;
     }
