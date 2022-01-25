@@ -45,14 +45,18 @@ class quiz{
         for(var i=0;i<5;i++){
             //randomly choose an unchosen question
             index = Math.floor(Math.random()*chooser.length);
+            //console.log("Index: "+index)
             //add it to quizQuestions array
-            quizQuestions[i] = this.questionEasy[index];
+            quizQuestions[i] = this.questionEasy[chooser[index]];
             //remove index for no repeats
             if(index==chooser.length-1){//end of array
+                //console.log("Removing End: "+chooser[index]);
                 chooser = chooser.slice(0,index);
+                //console.log(chooser);
             }else{//middle/beginning of array
-                //console.log(chooser.slice(0,index).concat(chooser.slice(index+1,chooser.length)));
+                //console.log("Removing middle/beginning: "+chooser[index]);
                 chooser = chooser.slice(0,index).concat(chooser.slice(index+1,chooser.length));
+                //console.log(chooser);
             }
         }
         return quizQuestions
@@ -63,7 +67,8 @@ class quiz{
         //for each question in quizQuestions
         for(var i=0;i<this.quizQuestions.length;i++){
             //check user answer with trueAnswer of quizQuestions
-            if(userAnswers[i]=this.quizQuestions.trueAnswer){
+
+            if(userAnswers[i]==this.quizQuestions[i].trueAnswer){
                 score[i] = 1;
             }else{
                 score[i] = 0;
@@ -89,3 +94,5 @@ console.log(myQuiz.quizQuestions[1].text);
 console.log(myQuiz.quizQuestions[2].text);
 console.log(myQuiz.quizQuestions[3].text);
 console.log(myQuiz.quizQuestions[4].text);
+const usrscr = myQuiz.userScore([0,0,0,0,0]);
+console.log(myQuiz.calculateScore(usrscr));
