@@ -27,13 +27,26 @@ class quiz{
     }
 
     displayQuestions(){
-        var htmlDisplay = "";
+        var htmlDisplay = "<form>";
         //for each question
-            //add text to htmlDisplay
-            //randomize question order and add to htmlDisplay
-            //add radio button for each question answer
-        //add quiz submit button
-        return htmlDisplay;
+        for(var i = 0; i<this.quizQuestions.length; i++){
+            htmlDisplay += this.quizQuestions[i].text+'<br/>';
+            htmlDisplay += '<input type="radio" id="qq'+i+'0" name="question'+i+'" value="0"></input>';
+            htmlDisplay += '<label for="qq'+i+'0">'+this.quizQuestions[i].answers[0]+'</label><br/>';
+            htmlDisplay += '<input type="radio" id="qq'+i+'1" name="question'+i+'" value="1"></input>';
+            htmlDisplay += '<label for="qq'+i+'1">'+this.quizQuestions[i].answers[1]+'</label><br/>';
+            htmlDisplay += '<input type="radio" id="qq'+i+'2" name="question'+i+'" value="2"></input>';
+            htmlDisplay += '<label for="qq'+i+'2">'+this.quizQuestions[i].answers[2]+'</label><br/>';
+            htmlDisplay += '<input type="radio" id="qq'+i+'3" name="question'+i+'" value="3"></input>';
+            htmlDisplay += '<label for="qq'+i+'3">'+this.quizQuestions[i].answers[3]+'</label><br/>';
+        }
+        //add quiz submit input
+        htmlDisplay += '</form><br/>';
+        //hide quizBegin button !!CAN REMOVE BUTTON FROM FORM
+        document.getElementById("quizBegin").style = "display: none;";
+        //change element innner html to htmlDisplay
+        document.getElementById("quizQuestions").innerHTML = htmlDisplay;
+        
     }
 
     //function to randomly select questions from qArray of specified difficulty
@@ -87,7 +100,7 @@ class quiz{
         return totalScore;
     }
 }
-
+/*
 const myQuiz = new quiz("easy");
 console.log(myQuiz.quizQuestions[0].text);
 console.log(myQuiz.quizQuestions[1].text);
@@ -96,3 +109,4 @@ console.log(myQuiz.quizQuestions[3].text);
 console.log(myQuiz.quizQuestions[4].text);
 const usrscr = myQuiz.userScore([0,0,0,0,0]);
 console.log(myQuiz.calculateScore(usrscr));
+*/

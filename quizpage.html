@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="./styles/general_styling.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://kit.fontawesome.com/4c54e0ffa5.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./scripts/quiz.js"></script>
+    <script>
+        var currentQuiz = new quiz("easy");
+    </script>
+    <title>Quiz Page</title>
+</head>
+
+<body>
+    <div class="titlebar">
+        <strong>Beginning The Gathering</strong>
+        <span class="home" title="Return to Home"><a href="homepage.html"><i class="fas fa-house-user"></i></a></span>
+    </div>
+    <br/>
+    <div id="quizQuestions">
+        This text should change
+    </div>
+    <form>
+        <input type="button" id="quizBegin" style="display: block;" onclick="currentQuiz.displayQuestions()" value="Begin Quiz"/> 
+    </form>
+    
+    <br/>
+    <em>By: Lukas Kaune, Nov 12, 2021</em>
+</body>
+</html>
