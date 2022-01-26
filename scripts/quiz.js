@@ -41,12 +41,29 @@ class quiz{
             htmlDisplay += '<label for="qq'+i+'3">'+this.quizQuestions[i].answers[3]+'</label><br/>';
         }
         //add quiz submit input
+        htmlDisplay += '<input type="button" id="submitQuiz" value="Submit Quiz" onclick="currentQuiz.displayQuestionsAndAnswers()"></input>'
         htmlDisplay += '</form><br/>';
         //hide quizBegin button !!CAN REMOVE BUTTON FROM FORM
         document.getElementById("quizBegin").style = "display: none;";
         //change element innner html to htmlDisplay
         document.getElementById("quizQuestions").innerHTML = htmlDisplay;
         
+    }
+
+    displayQuestionsAndAnswers(){
+        //set userScore to 0
+        var userScore = 0;
+        //get userAnswers for each question
+        for(var i = 0; i<this.quizQuestions.length; i++){
+            //get value from radio button based on name
+            //if it matches the true answer for the question
+                //set question highlight to green
+                //increment userScore
+            //else
+                //set question highlight to red
+                //indicate correct answer and users inccorect answer
+        }
+        //display user score at bottom of page
     }
 
     //function to randomly select questions from qArray of specified difficulty
@@ -73,31 +90,6 @@ class quiz{
             }
         }
         return quizQuestions
-    }
-
-    userScore(userAnswers){
-        var score = [];
-        //for each question in quizQuestions
-        for(var i=0;i<this.quizQuestions.length;i++){
-            //check user answer with trueAnswer of quizQuestions
-
-            if(userAnswers[i]==this.quizQuestions[i].trueAnswer){
-                score[i] = 1;
-            }else{
-                score[i] = 0;
-            }
-        }
-        return score;
-    }
-
-    calculateScore(userScore){
-        var totalScore = 0;
-        //for each element in userScore
-        for(var i = 0; i<userScore.length; i++){
-            //add userScore at current element to totalScore
-            totalScore+=userScore[i];
-        }
-        return totalScore;
     }
 }
 /*

@@ -39,7 +39,7 @@ input[type="text"]{
   margin-top: 5px;
   margin-bottom: 10px;
 }
-input[type="submit"] {
+input[id="faqSubmit"] {
   cursor: pointer;
   float: right;
 }
