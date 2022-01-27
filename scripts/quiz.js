@@ -31,7 +31,7 @@ class quiz{
         //for each question
         for(var i = 0; i<this.quizQuestions.length; i++){
             htmlDisplay += this.quizQuestions[i].text+'<br/>';
-            htmlDisplay += '<input type="radio" id="qq'+i+'0" name="question'+i+'" value="0"></input>';
+            htmlDisplay += '<input type="radio" checked=true id="qq'+i+'0" name="question'+i+'" value="0"></input>';
             htmlDisplay += '<label for="qq'+i+'0" id="ql'+i+'0">'+this.quizQuestions[i].answers[0]+'</label><br/>';
             htmlDisplay += '<input type="radio" id="qq'+i+'1" name="question'+i+'" value="1"></input>';
             htmlDisplay += '<label for="qq'+i+'1" id="ql'+i+'1">'+this.quizQuestions[i].answers[1]+'</label><br/>';
