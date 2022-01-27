@@ -27,18 +27,18 @@ class quiz{
     }
 
     displayQuestions(){
-        var htmlDisplay = "<form>";
+        var htmlDisplay = '<form name="quizForm" method="post">';
         //for each question
         for(var i = 0; i<this.quizQuestions.length; i++){
             htmlDisplay += this.quizQuestions[i].text+'<br/>';
             htmlDisplay += '<input type="radio" id="qq'+i+'0" name="question'+i+'" value="0"></input>';
-            htmlDisplay += '<label for="qq'+i+'0">'+this.quizQuestions[i].answers[0]+'</label><br/>';
+            htmlDisplay += '<label for="qq'+i+'0" id="ql'+i+'0">'+this.quizQuestions[i].answers[0]+'</label><br/>';
             htmlDisplay += '<input type="radio" id="qq'+i+'1" name="question'+i+'" value="1"></input>';
-            htmlDisplay += '<label for="qq'+i+'1">'+this.quizQuestions[i].answers[1]+'</label><br/>';
+            htmlDisplay += '<label for="qq'+i+'1" id="ql'+i+'1">'+this.quizQuestions[i].answers[1]+'</label><br/>';
             htmlDisplay += '<input type="radio" id="qq'+i+'2" name="question'+i+'" value="2"></input>';
-            htmlDisplay += '<label for="qq'+i+'2">'+this.quizQuestions[i].answers[2]+'</label><br/>';
+            htmlDisplay += '<label for="qq'+i+'2" id="ql'+i+'2">'+this.quizQuestions[i].answers[2]+'</label><br/>';
             htmlDisplay += '<input type="radio" id="qq'+i+'3" name="question'+i+'" value="3"></input>';
-            htmlDisplay += '<label for="qq'+i+'3">'+this.quizQuestions[i].answers[3]+'</label><br/>';
+            htmlDisplay += '<label for="qq'+i+'3" id="ql'+i+'3">'+this.quizQuestions[i].answers[3]+'</label><br/>';
         }
         //add quiz submit input
         htmlDisplay += '<input type="button" id="submitQuiz" value="Submit Quiz" onclick="currentQuiz.displayQuestionsAndAnswers()"></input>'
@@ -53,17 +53,30 @@ class quiz{
     displayQuestionsAndAnswers(){
         //set userScore to 0
         var userScore = 0;
+        var curr;
         //get userAnswers for each question
         for(var i = 0; i<this.quizQuestions.length; i++){
             //get value from radio button based on name
+            curr = document.forms["quizForm"]["question"+i].value;
             //if it matches the true answer for the question
+            if(curr==this.quizQuestions[i].trueAnswer){
                 //set question highlight to green
+                var elementID = "ql"+i.toString()+curr.toString();
+                document.getElementById(elementID).style = "background-color: green";
                 //increment userScore
-            //else
+                userScore++;
+            }else{
                 //set question highlight to red
+                var elementIDWrong = "ql"+i.toString()+curr.toString();
+                document.getElementById(elementIDWrong).style = "background-color: red";
                 //indicate correct answer and users inccorect answer
+                var elementIDRight = "ql"+i.toString()+this.quizQuestions[i].trueAnswer.toString();
+                document.getElementById(elementIDRight).style = "background-color: green";
+            }
+                
         }
         //display user score at bottom of page
+        document.getElementById("score").innerHTML = "You got "+userScore+" out of "+(this.quizQuestions.length);
     }
 
     //function to randomly select questions from qArray of specified difficulty
