@@ -101,6 +101,8 @@ class quiz{
         }
         //display user score at bottom of page
         document.getElementById("score").innerHTML = "You got "+userScore+" out of "+(this.quizQuestions.length);
+        document.getElementById("submitQuiz").value = "Take Another Quiz";
+        document.getElementById("submitQuiz").setAttribute("onclick","location.reload()");
     }
 
     //function to randomly select questions from qArray of specified difficulty
