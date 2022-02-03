@@ -2,15 +2,20 @@
 //also use the quiz in various ways
 
 class quiz{
-    constructor(){ 
+    constructor(){
+        //quiz question arrays
         this.questionEasy = [];
         this.questionMedium = [];       
-        this.questionHard = [];       
+        this.questionHard = [];
+        //used to initialize question arrays       
         this.createQuestions();
+        //save user selected difficulty
         this.difficulty = document.forms["quizStart"]["difficulty"].value;
+        //call randomizeQuestions and save the resulting question array
         this.quizQuestions = this.randomizeQuestions(this.difficulty);
     }
 
+    //initializes all question arrays
     createQuestions(){
         //create/instantiate question object
         //save object into question array of appropriate difficulty
@@ -51,6 +56,7 @@ class quiz{
         this.questionHard[9] = {text:"HARD The answer is     ", answers:["   ","B","C","D"], trueAnswer:0};
     }
 
+    //tells html page how to display questions and adds a quiz submit button to the page
     displayQuestions(){
         var htmlDisplay = '<form name="quizForm" method="post">';
         //for each question
@@ -74,6 +80,7 @@ class quiz{
         
     }
 
+    //modifies page to display questions with correct answers
     displayQuestionsAndAnswers(){
         //set userScore to 0
         var userScore = 0;
@@ -105,7 +112,7 @@ class quiz{
         document.getElementById("submitQuiz").setAttribute("onclick","location.reload()");
     }
 
-    //function to randomly select questions from qArray of specified difficulty
+    //function to randomly select questions from the array of specified difficulty
     randomizeQuestions(){
         var quizQuestions = [];
         var chooser = [0,1,2,3,4,5,6,7,8,9];
@@ -137,13 +144,3 @@ class quiz{
         return quizQuestions
     }
 }
-/*
-const myQuiz = new quiz("easy");
-console.log(myQuiz.quizQuestions[0].text);
-console.log(myQuiz.quizQuestions[1].text);
-console.log(myQuiz.quizQuestions[2].text);
-console.log(myQuiz.quizQuestions[3].text);
-console.log(myQuiz.quizQuestions[4].text);
-const usrscr = myQuiz.userScore([0,0,0,0,0]);
-console.log(myQuiz.calculateScore(usrscr));
-*/
