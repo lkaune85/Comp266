@@ -80,7 +80,7 @@ class quiz{
         
     }
 
-    //modifies page to display questions with correct answers
+    //modifies page to indicate correct/incorrect answers, calculate/display user score, and modify submit quiz button to be used to take another quiz
     displayQuestionsAndAnswers(){
         //set userScore to 0
         var userScore = 0;
