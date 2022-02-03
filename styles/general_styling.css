@@ -56,6 +56,11 @@ input[id="quizBegin"]{
   font-size: 90%;
 }
 
+form[id="quizStart"]{
+  margin: auto;
+  text-align: center;
+}
+
 input[id="submitQuiz"]{
   margin-top: 1em;
 }

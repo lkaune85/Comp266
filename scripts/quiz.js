@@ -2,12 +2,13 @@
 //also use the quiz in various ways
 
 class quiz{
-    constructor(quizDifficulty){ 
+    constructor(){ 
         this.questionEasy = [];
-        //this.questionMedium = [];       
-        //this.questionHard = [];       
+        this.questionMedium = [];       
+        this.questionHard = [];       
         this.createQuestions();
-        this.quizQuestions = this.randomizeQuestions(quizDifficulty);
+        this.difficulty = document.forms["quizStart"]["difficulty"].value;
+        this.quizQuestions = this.randomizeQuestions(this.difficulty);
     }
 
     createQuestions(){
@@ -20,10 +21,34 @@ class quiz{
         this.questionEasy[3] = {text:"The answer is D", answers:["A","B","C","D"], trueAnswer:3};
         this.questionEasy[4] = {text:"The answer is 1", answers:["1","B","C","D"], trueAnswer:0};
         this.questionEasy[5] = {text:"The answer is !", answers:["!","B","C","D"], trueAnswer:0};
-        this.questionEasy[6] = {text:"The answer is __", answers:[" ","B","C","D"], trueAnswer:0};
+        this.questionEasy[6] = {text:"The answer is __", answers:["__","B","C","D"], trueAnswer:0};
         this.questionEasy[7] = {text:"The answer is test", answers:["test","B","C","D"], trueAnswer:0};
         this.questionEasy[8] = {text:"The answer is -1", answers:["-1","B","C","D"], trueAnswer:0};
         this.questionEasy[9] = {text:"The answer is     ", answers:["   ","B","C","D"], trueAnswer:0};
+
+        //medium questions
+        this.questionMedium[0] = {text:"Medium The answer is A", answers:["A","B","C","D"], trueAnswer:0};
+        this.questionMedium[1] = {text:"Medium The answer is B", answers:["A","B","C","D"], trueAnswer:1};
+        this.questionMedium[2] = {text:"Medium The answer is C", answers:["A","B","C","D"], trueAnswer:2};
+        this.questionMedium[3] = {text:"Medium The answer is D", answers:["A","B","C","D"], trueAnswer:3};
+        this.questionMedium[4] = {text:"Medium The answer is 1", answers:["1","B","C","D"], trueAnswer:0};
+        this.questionMedium[5] = {text:"Medium The answer is !", answers:["!","B","C","D"], trueAnswer:0};
+        this.questionMedium[6] = {text:"Medium The answer is __", answers:["__","B","C","D"], trueAnswer:0};
+        this.questionMedium[7] = {text:"Medium The answer is test", answers:["test","B","C","D"], trueAnswer:0};
+        this.questionMedium[8] = {text:"Medium The answer is -1", answers:["-1","B","C","D"], trueAnswer:0};
+        this.questionMedium[9] = {text:"Medium The answer is     ", answers:["   ","B","C","D"], trueAnswer:0};
+
+        //hard questions
+        this.questionHard[0] = {text:"HARD The answer is A", answers:["A","B","C","D"], trueAnswer:0};
+        this.questionHard[1] = {text:"HARD The answer is B", answers:["A","B","C","D"], trueAnswer:1};
+        this.questionHard[2] = {text:"HARD The answer is C", answers:["A","B","C","D"], trueAnswer:2};
+        this.questionHard[3] = {text:"HARD The answer is D", answers:["A","B","C","D"], trueAnswer:3};
+        this.questionHard[4] = {text:"HARD The answer is 1", answers:["1","B","C","D"], trueAnswer:0};
+        this.questionHard[5] = {text:"HARD The answer is !", answers:["!","B","C","D"], trueAnswer:0};
+        this.questionHard[6] = {text:"HARD The answer is __", answers:["__","B","C","D"], trueAnswer:0};
+        this.questionHard[7] = {text:"HARD The answer is test", answers:["test","B","C","D"], trueAnswer:0};
+        this.questionHard[8] = {text:"HARD The answer is -1", answers:["-1","B","C","D"], trueAnswer:0};
+        this.questionHard[9] = {text:"HARD The answer is     ", answers:["   ","B","C","D"], trueAnswer:0};
     }
 
     displayQuestions(){
@@ -43,8 +68,7 @@ class quiz{
         //add quiz submit input
         htmlDisplay += '<input type="button" id="submitQuiz" value="Submit Quiz" onclick="currentQuiz.displayQuestionsAndAnswers()"></input>'
         htmlDisplay += '</form><br/>';
-        //hide quizBegin button !!CAN REMOVE BUTTON FROM FORM
-        document.getElementById("quizBegin").style = "display: none;";
+        document.getElementById("quizStart").style = "display: none;";
         //change element innner html to htmlDisplay
         document.getElementById("quizQuestions").innerHTML = htmlDisplay;
         
@@ -80,7 +104,7 @@ class quiz{
     }
 
     //function to randomly select questions from qArray of specified difficulty
-    randomizeQuestions(qDifficulty){
+    randomizeQuestions(){
         var quizQuestions = [];
         var chooser = [0,1,2,3,4,5,6,7,8,9];
         var index;
@@ -90,7 +114,13 @@ class quiz{
             index = Math.floor(Math.random()*chooser.length);
             //console.log("Index: "+index)
             //add it to quizQuestions array
-            quizQuestions[i] = this.questionEasy[chooser[index]];
+            if(this.difficulty == "easy"){
+                quizQuestions[i] = this.questionEasy[chooser[index]];
+            }else if(this.difficulty == "medium"){
+                quizQuestions[i] = this.questionMedium[chooser[index]];
+            }else{
+                quizQuestions[i] = this.questionHard[chooser[index]];
+            }
             //remove index for no repeats
             if(index==chooser.length-1){//end of array
                 //console.log("Removing End: "+chooser[index]);
