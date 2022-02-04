@@ -19,17 +19,32 @@ class quiz{
     createQuestions(){
         //create/instantiate question object
         //save object into question array of appropriate difficulty
-        this.questionEasy[0] = {text:"The answer is A", answers:["A","B","C","D"], trueAnswer:0};
+        this.questionEasy[0] = {text:"What is a cards cost called?",
+        answers:["Mana Value","Gem Cost","Gold Value","Color Cost"], trueAnswer:0};
         //repeat for every question
-        this.questionEasy[1] = {text:"The answer is B", answers:["A","B","C","D"], trueAnswer:1};
-        this.questionEasy[2] = {text:"The answer is C", answers:["A","B","C","D"], trueAnswer:2};
-        this.questionEasy[3] = {text:"The answer is D", answers:["A","B","C","D"], trueAnswer:3};
-        this.questionEasy[4] = {text:"The answer is 1", answers:["1","B","C","D"], trueAnswer:0};
-        this.questionEasy[5] = {text:"The answer is !", answers:["!","B","C","D"], trueAnswer:0};
-        this.questionEasy[6] = {text:"The answer is __", answers:["__","B","C","D"], trueAnswer:0};
-        this.questionEasy[7] = {text:"The answer is test", answers:["test","B","C","D"], trueAnswer:0};
-        this.questionEasy[8] = {text:"The answer is -1", answers:["-1","B","C","D"], trueAnswer:0};
-        this.questionEasy[9] = {text:"The answer is     ", answers:["   ","B","C","D"], trueAnswer:0};
+        this.questionEasy[1] = {text:"Name the mechanic: Excess combat damage is dealt to the defending creatures controller.", 
+        answers:["Firststrike","Trample","Lifelink","Deathtouch"], trueAnswer:1};
+        this.questionEasy[2] = {text:"What is the starting life-total in Standard Magic games", 
+        answers:["15","30","20","40"], trueAnswer:2};
+        this.questionEasy[3] = {text:"What is the first phase of a turn?", 
+        answers:["Upkeep","Main Phase One","End Step","Untap"], trueAnswer:3};
+        this.questionEasy[4] = {text:"What is the maximum hand-size?", 
+        answers:["7","10","5","3"], trueAnswer:0};
+        this.questionEasy[5] = {text:"During what phase can you cast Sorcery spells?", 
+        answers:["Main Phase","End Step","Upkeep","Combat"], trueAnswer:0};
+        this.questionEasy[6] = {text:"What happens when you mulligan a hand?", 
+        answers:["You put your current hand on the bottom of your library and draw 7 new cards",
+        "You discard your current hand and draw a hand of cards with one less card in it than the previous mulligan",
+        "You shuffle your hand back into your library, draw a new hand of 7 cards, and put a number of cards equal to the number of times you mulliganed on the bottom of you library"
+        ,"You shuffle your hand back into your library. draw a new hand of cards with one less card for each time you mulliganed"], 
+        trueAnswer:2};
+        this.questionEasy[7] = {text:"Can you cast any kind of spells on your opponents turn?", 
+        answers:["Yes, you can always any kind of spell","No, you can never casts spells on your opponents turn",
+        "Yes, but only if they are instants or have flash","Yes, except for sorceries"], trueAnswer:2};
+        this.questionEasy[8] = {text:"How many of the same card are you allowed in a Standard Magic deck?", 
+        answers:["1","4","2","Any number"], trueAnswer:1};
+        this.questionEasy[9] = {text:"How many cards in total are allowed in a Standard Magic deck?", 
+        answers:["At least 60","100 or more, but no duplicates except for basic lands","61","All of the above"], trueAnswer:3};
 
         //medium questions
         this.questionMedium[0] = {text:"Medium The answer is A", answers:["A","B","C","D"], trueAnswer:0};
@@ -61,7 +76,7 @@ class quiz{
         var htmlDisplay = '<form name="quizForm" method="post">';
         //for each question
         for(var i = 0; i<this.quizQuestions.length; i++){
-            htmlDisplay += this.quizQuestions[i].text+'<br/>';
+            htmlDisplay += '<strong>'+this.quizQuestions[i].text+'</strong><br/>';
             htmlDisplay += '<input type="radio" checked=true id="qq'+i+'0" name="question'+i+'" value="0"></input>';
             htmlDisplay += '<label for="qq'+i+'0" id="ql'+i+'0">'+this.quizQuestions[i].answers[0]+'</label><br/>';
             htmlDisplay += '<input type="radio" id="qq'+i+'1" name="question'+i+'" value="1"></input>';
