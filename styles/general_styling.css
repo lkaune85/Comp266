@@ -39,13 +39,30 @@ input[type="text"]{
   margin-top: 5px;
   margin-bottom: 10px;
 }
-input[type="submit"] {
+input[id="faqSubmit"] {
   cursor: pointer;
   float: right;
 }
 input[type=text]:focus {
   border: 2px solid rgb(54, 54, 54);
   outline: none;
+}
+
+input[id="quizBegin"]{
+  margin: auto;
+  text-align: center;
+  width: 20%;
+  height: 20%;
+  font-size: 90%;
+}
+
+form[id="quizStart"]{
+  margin: auto;
+  text-align: center;
+}
+
+input[id="submitQuiz"]{
+  margin-top: 1em;
 }
 
 /*style for the title bar */

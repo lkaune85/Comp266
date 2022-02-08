@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="./styles/general_styling.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://kit.fontawesome.com/4c54e0ffa5.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./scripts/quiz.js"></script>
+    <script>
+        var currentQuiz;
+    </script>
+    <title>Quiz Page</title>
+</head>
+
+<body>
+    <div class="titlebar">
+        <strong>Beginning The Gathering</strong>
+        <span class="home" title="Return to Home"><a href="homepage.html"><i class="fas fa-house-user"></i></a></span>
+    </div>
+    <br/>
+
+    <div id="score"></div><br/>
+
+    <div id="quizQuestions"></div><br/>
+
+    <form id="quizStart">
+        <input type="radio" id="easy" checked=true name="difficulty" value="easy"/>
+        <label for="easy">Easy</label>
+        <input type="radio" id="medium" name="difficulty" value="medium"/>
+        <label for="medium">Medium</label>
+        <input type="radio" id="hard" name="difficulty" value="hard"/>
+        <label for="hard">Hard</label>
+        <input type="button" id="quizBegin" style="display: block;" onclick="currentQuiz = new quiz(); currentQuiz.displayQuestions()" value="Begin Quiz"/> 
+    </form>
+    
+    <br/>
+    <em>By: Lukas Kaune, Nov 12, 2021</em>
+</body>
+</html>
