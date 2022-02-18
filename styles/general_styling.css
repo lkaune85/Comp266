@@ -197,7 +197,6 @@ input[id="submitQuiz"]{
   display: block;
 }
 
-
 /*styling for home icon*/
 i[class="fas fa-house-user"] {
   color: white;
@@ -216,6 +215,20 @@ i[class="fas fa-house-user"]:hover{
   float: left;
   width: 75%;
   margin-top: 6px;
+}
+
+.tooltip {
+  position: absolute;
+  padding-bottom: 5px;
+}
+
+.faqtip + .tooltip > .tooltip-inner {
+  background-color: #7ba73d; 
+  color: #FFFFFF; 
+  border: 1px solid rgb(138, 1, 95); 
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;  
 }
 
 /*
