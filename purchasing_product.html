@@ -5,14 +5,10 @@
     <link rel="stylesheet" type="text/css" href="./styles/general_styling.css"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script src="https://kit.fontawesome.com/4c54e0ffa5.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="./scripts/quiz.js"></script>
-    <script>
-        var currentQuiz;
-    </script>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript" src="./scripts/tawk_chat.js"></script>
     <!--End of Tawk.to Script-->
-    <title>Quiz Page</title>
+    <title>Purchasing Product</title>
 </head>
 
 <body>
@@ -20,25 +16,16 @@
         <strong>Beginning The Gathering</strong>
         <span class="home" title="Return to Home"><a href="homepage.html"><i class="fas fa-house-user"></i></a></span>
     </div>
-    <br/>
-
-    <div id="score"></div><br/>
-
-    <div id="quizQuestions"></div><br/>
-
-    <form id="quizStart">
-        <input type="radio" id="easy" checked=true name="difficulty" value="easy"/>
-        <label for="easy">Easy</label>
-        <input type="radio" id="medium" name="difficulty" value="medium"/>
-        <label for="medium">Medium</label>
-        <input type="radio" id="hard" name="difficulty" value="hard"/>
-        <label for="hard">Hard</label>
-        <input type="button" id="quizBegin" style="display: block;" onclick="currentQuiz = new quiz(); currentQuiz.displayQuestions()" value="Begin Quiz"/> 
-    </form>
+    
+    <iframe
+        width="50%"
+        height="500px"
+        frameborder="0" style="border:0; margin-left: auto; margin-right: auto; display: block; 
+        margin-top: 2em;"
+        src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCY5iJ0_66mvBW6zW3tqZeYabj8Hu2W0pM&q=magic+the+gathering+near+me&zoom=10" allowfullscreen>
+    </iframe>
     
     <br/>
-    
-
     <div class="endBar">    
         <div style="position: absolute; bottom: 10px;">
             <em>By: Lukas Kaune, Feb 23, 2022</em>
