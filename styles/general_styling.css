@@ -231,6 +231,11 @@ i[class="fas fa-house-user"]:hover{
   border-radius: 5px;  
 }
 
+.endBar{
+  position: relative;
+  width: 600px; height: 770px;
+}
+
 /*
 *Code adapted from w3schools 2-column example
 *https://www.w3schools.com/css/css_website_layout.asp
@@ -249,7 +254,7 @@ i[class="fas fa-house-user"]:hover{
 
 /*resive float windows amnd buttons when screen is less than 640px*/
 @media screen and (max-width: 640px) {
-  .float25, .float75, input[type="submit"] {
+  .float25, .float75, input[type="submit"] , iframe{
     width: 100%;
     margin-top: 0.5px;
   }
