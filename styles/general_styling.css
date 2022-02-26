@@ -11,8 +11,11 @@ body {
   color: hsl(0, 0%, 100%);
 }
 
-body a{
+.row a{
   color: hsl(39, 76%, 45%);
+}
+.row a:visited{
+  color: hsl(2, 76%, 45%);
 }
 
 /*general table styles*/
