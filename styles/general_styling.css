@@ -11,6 +11,10 @@ body {
   color: hsl(0, 0%, 100%);
 }
 
+body a{
+  color: hsl(39, 76%, 45%);
+}
+
 /*general table styles*/
 table {
   max-width: 100%;
