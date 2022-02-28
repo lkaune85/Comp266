@@ -4,9 +4,9 @@
 <head>
     <link rel="stylesheet" type="text/css" href="./styles/general_styling.css"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script src="https://kit.fontawesome.com/4c54e0ffa5.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://kit.fontawesome.com/4c54e0ffa5.js"></script>
     <script type="text/javascript" src="./scripts/quiz.js"></script>
-    <script>
+    <script type="text/javascript">
         var currentQuiz;
     </script>
     <!--Start of Tawk.to Script-->
@@ -26,8 +26,8 @@
 
     <div id="quizQuestions"></div><br/>
 
-    <form id="quizStart">
-        <input type="radio" id="easy" checked=true name="difficulty" value="easy"/>
+    <form id="quizStart" action="quizpage.html">
+        <input type="radio" id="easy" checked="true" name="difficulty" value="easy"/>
         <label for="easy">Easy</label>
         <input type="radio" id="medium" name="difficulty" value="medium"/>
         <label for="medium">Medium</label>
